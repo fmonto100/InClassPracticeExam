@@ -7,10 +7,20 @@ public class MyString {
 	private int initialCapacity;
 	
 	public MyString() {
-		this.buffer = new char[16];
+		this.buffer = new char[this.capacity];
 		this.capacity = 16;
 		this.size = 0;
 	}
+	
+	public int size() {
+		return this.size;
+	}
+	 public char charAt(int index) {
+		 return this.buffer[index];
+	 }
+	 public void set(char ch, int index) {
+		 this.buffer[index]=ch;
+	 }
 	public MyString(String str) {
 		if(str == null) {
 			this.buffer = new char[16];
@@ -45,6 +55,13 @@ public class MyString {
 		buffer[size] = c;
 		size++;
 		
+	}
+	private void resize(int i) {
+		char [] newArray = new char[capacity * 2];
+		
+		for (i = 0;i < )
+			
+		buffer = newArray;
 	}
 	
 }
